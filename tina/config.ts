@@ -29,6 +29,39 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: "pages",
+        label: "Pages",
+        path: "content",
+        format: "md",
+        match: {
+          include: "index",
+        },
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "layout",
+            label: "Layout",
+            required: true,
+            ui: {
+              component: "hidden",
+            },
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+        ],
+      },
+      {
         name: "post",
         label: "Posts",
         path: "content/posts",
