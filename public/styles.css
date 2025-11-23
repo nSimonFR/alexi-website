@@ -1,0 +1,402 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+/* Global Header */
+.global-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.global-header-left,
+.global-header-center,
+.global-header-right {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+}
+
+.global-header-left {
+  justify-content: flex-start;
+}
+
+.global-header-center {
+  justify-content: center;
+}
+
+.global-header-right {
+  justify-content: flex-end;
+}
+
+.global-header a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+}
+
+.global-header a:hover {
+  opacity: 0.6;
+}
+
+.global-header-center span {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* Global Footer */
+.global-footer {
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5rem 2rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-separator {
+  color: #ccc;
+  font-weight: 300;
+}
+
+.global-footer a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.global-footer a:hover {
+  opacity: 0.6;
+}
+
+.global-footer svg {
+  display: block;
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+main {
+  background: white;
+  padding: 1.5rem;
+}
+
+main a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main a:hover {
+  opacity: 0.7;
+}
+
+/* Generic Headings */
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+/* Contact Page */
+.contact-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.contact-container h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.contact-details {
+  margin-top: 2rem;
+}
+
+.contact-details p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.contact-details a {
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.contact-details a:hover {
+  opacity: 0.6;
+}
+
+.content {
+  margin-top: 2rem;
+  color: #555;
+}
+
+/* Home Page Header */
+.header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.header h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project-item {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-item:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-director {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Post Styles */
+.post-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+  opacity: 0.6;
+}
+
+.post-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.post-left {
+  padding-right: 1rem;
+}
+
+.post-right {
+  position: sticky;
+  top: 2rem;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.post-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media(max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media(max-width: 768px) {
+  .global-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+  }
+  
+  .global-header-left,
+  .global-header-center,
+  .global-header-right {
+    text-align: center;
+  }
+
+  .global-footer {
+    padding: 1.5rem 2rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .post-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .post-left {
+    padding-right: 0;
+  }
+
+  .post-right {
+    position: static;
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+

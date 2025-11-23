@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Projects</title>
+      <title>Documentaire</title>
       <link rel="stylesheet" href="/public/styles.css"></head>
 
   <body>
@@ -24,50 +24,14 @@
     <main>
       <div class="projects-grid">
         
-          <a href="/posts/project-two/" class="project-item">
+          <a href="/posts/project-five/" class="project-item">
             
-              <img src="/public/placeholder-project-2.jpg" alt="Project Two">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Two</h2>
-              
-                <p class="project-director">Réalisé par: Jean Dupont</p>
-              
-            </div>
-          </a>
-        
-          <a href="/posts/project-three/" class="project-item">
-            
-              <img src="/public/placeholder-project-3.jpg" alt="Project Three">
+              <img src="/public/placeholder-project-5.jpg" alt="Project Five">
             
             <div class="project-overlay">
-              <h2 class="project-title">Project Three</h2>
+              <h2 class="project-title">Project Five</h2>
               
-                <p class="project-director">Réalisé par: Marie Leclerc</p>
-              
-            </div>
-          </a>
-        
-          <a href="/posts/project-four/" class="project-item">
-            
-              <img src="/public/placeholder-project-4.jpg" alt="Project Four">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Four</h2>
-              
-                <p class="project-director">Réalisé par: Pierre Martin</p>
-              
-            </div>
-          </a>
-        
-          <a href="/posts/project-six/" class="project-item">
-            
-              <img src="/public/placeholder-project-6.jpg" alt="Project Six">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Six</h2>
-              
-                <p class="project-director">Réalisé par: Luc Dubois</p>
+                <p class="project-director">Réalisé par: Sophie Bernard</p>
               
             </div>
           </a>
@@ -102,10 +66,9 @@
 </footer>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
         const projectItems = document.querySelectorAll('.project-item');
-        const delayBetweenProjects = 333; // milliseconds (3 projects per second)
-        
+        const delayBetweenProjects = 167; // milliseconds (6 projects per second)
         projectItems.forEach((item, index) => {
           setTimeout(() => {
             item.classList.add('animate-in');

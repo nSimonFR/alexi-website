@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "head.njk" %}
+  <body>
+    {% include "header.njk" %}
+    <main>
+      <div class="projects-grid">
+        {% for post in collections.documentary %}
+          <a href="{{ post.url }}" class="project-item">
+            {% if post.data.image %}
+              <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+            {% endif %}
+            <div class="project-overlay">
+              <h2 class="project-title">{{ post.data.title }}</h2>
+              {% if post.data.director %}
+                <p class="project-director">Réalisé par: {{ post.data.director }}</p>
+              {% endif %}
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </main>
+    {% include "footer.njk" %}
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const projectItems = document.querySelectorAll('.project-item');
+        const delayBetweenProjects = 167; // milliseconds (6 projects per second)
+        projectItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('animate-in');
+          }, index * delayBetweenProjects);
+        });
+      });
+    </script>
+  </body>
+</html>

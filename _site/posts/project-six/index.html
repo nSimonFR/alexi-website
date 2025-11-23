@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Projects</title>
+      <title>Project Six</title>
       <link rel="stylesheet" href="/public/styles.css"></head>
 
   <body>
@@ -21,59 +21,26 @@
   </div>
 </nav>
 
-    <main>
-      <div class="projects-grid">
+    <div class="post-container">
+      <article class="post-layout">
+        <div class="post-left">
+          <header class="post-header">
+            <h1 class="post-title">Project Six</h1>
+          </header>
+          <div class="post-content">
+            <h2>Project Six</h2>
+<p>Sixth sample project completing two full rows in the grid.</p>
+<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+
+          </div>
+        </div>
         
-          <a href="/posts/project-two/" class="project-item">
-            
-              <img src="/public/placeholder-project-2.jpg" alt="Project Two">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Two</h2>
-              
-                <p class="project-director">Réalisé par: Jean Dupont</p>
-              
-            </div>
-          </a>
+        <div class="post-right">
+          <img src="/public/placeholder-project-6.jpg" alt="Project Six" class="post-image">
+        </div>
         
-          <a href="/posts/project-three/" class="project-item">
-            
-              <img src="/public/placeholder-project-3.jpg" alt="Project Three">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Three</h2>
-              
-                <p class="project-director">Réalisé par: Marie Leclerc</p>
-              
-            </div>
-          </a>
-        
-          <a href="/posts/project-four/" class="project-item">
-            
-              <img src="/public/placeholder-project-4.jpg" alt="Project Four">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Four</h2>
-              
-                <p class="project-director">Réalisé par: Pierre Martin</p>
-              
-            </div>
-          </a>
-        
-          <a href="/posts/project-six/" class="project-item">
-            
-              <img src="/public/placeholder-project-6.jpg" alt="Project Six">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Six</h2>
-              
-                <p class="project-director">Réalisé par: Luc Dubois</p>
-              
-            </div>
-          </a>
-        
-      </div>
-    </main>
+      </article>
+    </div>
     <footer class="global-footer">
   <div class="footer-content">
     <div class="footer-left">
@@ -101,17 +68,5 @@
   </div>
 </footer>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const projectItems = document.querySelectorAll('.project-item');
-        const delayBetweenProjects = 333; // milliseconds (3 projects per second)
-        
-        projectItems.forEach((item, index) => {
-          setTimeout(() => {
-            item.classList.add('animate-in');
-          }, index * delayBetweenProjects);
-        });
-      });
-    </script>
   </body>
 </html>

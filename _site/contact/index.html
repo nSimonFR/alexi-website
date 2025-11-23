@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Projects</title>
+      <title>Alexi Bouygues</title>
       <link rel="stylesheet" href="/public/styles.css"></head>
 
   <body>
@@ -21,59 +21,19 @@
   </div>
 </nav>
 
-    <main>
-      <div class="projects-grid">
-        
-          <a href="/posts/project-two/" class="project-item">
-            
-              <img src="/public/placeholder-project-2.jpg" alt="Project Two">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Two</h2>
-              
-                <p class="project-director">Réalisé par: Jean Dupont</p>
-              
-            </div>
-          </a>
-        
-          <a href="/posts/project-three/" class="project-item">
-            
-              <img src="/public/placeholder-project-3.jpg" alt="Project Three">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Three</h2>
-              
-                <p class="project-director">Réalisé par: Marie Leclerc</p>
-              
-            </div>
-          </a>
-        
-          <a href="/posts/project-four/" class="project-item">
-            
-              <img src="/public/placeholder-project-4.jpg" alt="Project Four">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Four</h2>
-              
-                <p class="project-director">Réalisé par: Pierre Martin</p>
-              
-            </div>
-          </a>
-        
-          <a href="/posts/project-six/" class="project-item">
-            
-              <img src="/public/placeholder-project-6.jpg" alt="Project Six">
-            
-            <div class="project-overlay">
-              <h2 class="project-title">Project Six</h2>
-              
-                <p class="project-director">Réalisé par: Luc Dubois</p>
-              
-            </div>
-          </a>
-        
-      </div>
-    </main>
+    <div class="container">
+      <main>
+        <div class="contact-container">
+  <h1>Alexi Bouygues</h1>
+  <p class="contact-title">Chef Opérateur</p>
+  <div class="contact-details">
+    <p>Email: <a href="mailto:alexi.bouygues@gmail.com">alexi.bouygues@gmail.com</a></p>
+    <p>Téléphone: <a href="tel:+33631290153">+33 6 31 29 01 53</a></p>
+  </div>
+</div>
+
+      </main>
+    </div>
     <footer class="global-footer">
   <div class="footer-content">
     <div class="footer-left">
@@ -101,17 +61,5 @@
   </div>
 </footer>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const projectItems = document.querySelectorAll('.project-item');
-        const delayBetweenProjects = 333; // milliseconds (3 projects per second)
-        
-        projectItems.forEach((item, index) => {
-          setTimeout(() => {
-            item.classList.add('animate-in');
-          }, index * delayBetweenProjects);
-        });
-      });
-    </script>
   </body>
 </html>
