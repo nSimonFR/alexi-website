@@ -102,10 +102,9 @@
 </footer>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
         const projectItems = document.querySelectorAll('.project-item');
-        const delayBetweenProjects = 333; // milliseconds (3 projects per second)
-        
+        const delayBetweenProjects = 167; // milliseconds (6 projects per second)
         projectItems.forEach((item, index) => {
           setTimeout(() => {
             item.classList.add('animate-in');

@@ -82,6 +82,24 @@ npm run build
 
 This will generate your static site in the `_site` directory.
 
+To build for GitHub Pages deployment (with subdirectory path):
+
+```bash
+npm run build:prod
+```
+
+## Environment Variables
+
+The site supports configurable base paths for deployment:
+
+- **`PATH_PREFIX`**: Base path for Eleventy (default: `/`)
+  - Example: `PATH_PREFIX=/alexi-website/`
+  
+- **`TINA_BASE_PATH`**: Base path for TinaCMS admin (default: `""`)
+  - Example: `TINA_BASE_PATH=alexi-website`
+
+These are automatically set by the GitHub Actions workflow for production deployment.
+
 ## Customization
 
 ### Grid Layout

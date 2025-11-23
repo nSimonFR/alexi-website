@@ -14,9 +14,9 @@
           </div>
         </div>
         {% if image %}
-        <div class="post-right">
-          <img src="{{ image }}" alt="{{ title }}" class="post-image">
-        </div>
+          <div class="post-right">
+            <img src="{{ image | url }}" alt="{{ title }}" class="post-image">
+          </div>
         {% endif %}
       </article>
     </div>

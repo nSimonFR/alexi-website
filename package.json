@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"eleventy --serve\"",
     "dev:network": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"eleventy --serve --host=0.0.0.0\"",
-    "build": "tinacms build && eleventy"
+    "build": "tinacms build && eleventy",
+    "build:prod": "TINA_BASE_PATH=alexi-website PATH_PREFIX=/alexi-website/ npm run build"
   },
   "keywords": [],
   "author": "",

@@ -2,6 +2,7 @@
 title: Bande démo
 vimeoUrl: 'https://player.vimeo.com/video/524933864'
 layout: layout.njk
+permalink: /bande-demo/
 ---
 
 # {{ title }}

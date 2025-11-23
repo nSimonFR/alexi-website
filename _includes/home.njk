@@ -6,9 +6,9 @@
     <main>
       <div class="projects-grid">
         {% for post in collections.fiction %}
-          <a href="{{ post.url }}" class="project-item">
+          <a href="{{ post.url | url }}" class="project-item">
             {% if post.data.image %}
-              <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+              <img src="{{ post.data.image | url }}" alt="{{ post.data.title }}">
             {% endif %}
             <div class="project-overlay">
               <h2 class="project-title">{{ post.data.title }}</h2>
